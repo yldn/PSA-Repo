@@ -1,0 +1,9 @@
+#!/bin/bash
+
+for groupid in {01..10}
+do
+        groupadd -g 20${groupid} g20${groupid}
+        useradd -g 20${groupid} -u 20${groupid}1 u20${groupid}1
+        useradd -g 20${groupid} -u 20${groupid}2 u20${groupid}2
+done
+ 
