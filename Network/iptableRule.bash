@@ -50,8 +50,8 @@ iptables -A INPUT -p icmp -j ACCEPT
 iptables -A OUTPUT -p icmp -j ACCEPT
 
 #external(de.ubuntu)
-iptables -A INPUT -d 185.125.190.39 -j ACCEPT
-iptables -A OUTPUT -d 185.125.190.39 -j ACCEPT
+iptables -A INPUT -s de.archive.ubuntu.com -p all -j ACCEPT
+iptables -A OUTPUT -d de.archive.ubuntu.com -p all -j ACCEPT
 
 #Proxy Server
 iptables -A INPUT -p tcp --sport 8080 -s proxy.in.tum.de -j ACCEPT
